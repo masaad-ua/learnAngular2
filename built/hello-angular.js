@@ -1,4 +1,5 @@
-System.register(['@angular/core'], function(exports_1) {
+System.register(["@angular/core"], function (exports_1, context_1) {
+    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,15 +9,16 @@ System.register(['@angular/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var HelloAngularComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, HelloAngularComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
-            }],
-        execute: function() {
-            HelloAngularComponent = (function () {
+            }
+        ],
+        execute: function () {
+            HelloAngularComponent = /** @class */ (function () {
                 function HelloAngularComponent() {
                     this.greeting = 'Hello Angular 2!';
                 }
@@ -24,11 +26,11 @@ System.register(['@angular/core'], function(exports_1) {
                     core_1.Component({
                         selector: 'hello-angular',
                         template: '<h1>{{greeting}}</h1>'
-                    }), 
-                    __metadata('design:paramtypes', [])
+                    }),
+                    __metadata("design:paramtypes", [])
                 ], HelloAngularComponent);
                 return HelloAngularComponent;
-            })();
+            }());
         }
-    }
+    };
 });
