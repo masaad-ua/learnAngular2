@@ -1,0 +1,30 @@
+<div class="mail-container container">
+    <div class="row">
+        <button-list
+                (buttonWasClicked)="changeList($event)"
+                class="col-md-2"
+                #button>
+        </button-list>
+        <div class="col-md-10">
+            <ul class="list-wrapper inline" *ngIf="!showFieldOfLetter" >
+
+                <li *ngFor = "let letter of listOfCurrentLetter; let i = index; let last = last"
+                    data-id
+                    [dateLetter] = "letter.date"
+                    [dateLetterShow] = "dateLetterShow1"
+                    class="clearfix"
+                    (click)="readThisLetter(letter.id)">
+                    <span class="float-left ">{{letter.name}}</span>
+                    <span class="float-right ">{{letter.address}}</span>
+                </li>
+                <span #dateLetterShow1>Letters was written ....</span>
+            </ul>
+
+            <div class="email-text-container" *ngIf="showFieldOfLetter">
+                <p >{{textLetter}}</p>
+
+            </div>
+        </div>
+
+    </div>
+</div>

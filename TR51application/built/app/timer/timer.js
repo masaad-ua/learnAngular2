@@ -1,0 +1,17 @@
+System.register(['./timer-widget.component'], function(exports_1) {
+    var timer_widget_component_1;
+    var TIMER_DIRECTIVES;
+    return {
+        setters:[
+            function (timer_widget_component_1_1) {
+                timer_widget_component_1 = timer_widget_component_1_1;
+            }],
+        execute: function() {
+            TIMER_DIRECTIVES = [
+                timer_widget_component_1.default
+            ];
+            exports_1("TIMER_DIRECTIVES", TIMER_DIRECTIVES);
+            exports_1("TimerWidgetComponent", timer_widget_component_1.default);
+        }
+    }
+});

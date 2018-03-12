@@ -1,0 +1,11 @@
+<div class="btn-group-vertical" role="group">
+    <!--*ngFor="let task of tasks; let i = index"-->
+    <!--(buttonWasClicked)="clickButton()"-->
+
+        <button
+                *ngFor = "let button of buttonArray; let i= index; let last = last"
+                type="button"
+                (click)="clickButton(buttonArray[i])"
+                class="btn btn-default">{{buttonArray[i] | uppercase}}
+        </button>
+</div>
