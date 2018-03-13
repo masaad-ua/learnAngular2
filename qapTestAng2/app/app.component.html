@@ -1,0 +1,10 @@
+<div
+    id="listContainer"
+    class="lists-container flexible space-between"
+    [ngClass]="{'swipe-right': swiped}"
+    swipe-listener
+    (itWasSwiped) = "onSwiped($event)">
+
+    <lists [arrayOfCheckedItem] ="arrayOfCheckedItem" (sendArrayOfCheckedItems)="updateArrayOfCheckedItems($event)"> </lists>
+    <mail-form [array] = "arrayOfCheckedItem" ></mail-form>
+</div>

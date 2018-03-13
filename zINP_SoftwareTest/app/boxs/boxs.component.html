@@ -1,0 +1,13 @@
+<div class="boxs-container" >
+    <div class="box" *ngFor="let box of listOfBoxs; let i = index;" [ngStyle]="{'background': box.color }" (click) ="chooseBox(box.id)">
+        <p [ngStyle]="{'background': box.color }">{{box.title}}</p>
+    </div>
+
+
+</div>
+<form-edit
+        *ngIf="showForm"
+        [obj] = "box"
+        (updateBox)="updateListOfBox($event)"
+        class="form-container">
+</form-edit>

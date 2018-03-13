@@ -1,0 +1,59 @@
+<div class="form-container" >
+
+
+    <section class="section form-wrapper">
+        <form action="" class="form" name="form" >
+            <div class="form-header">
+                <div class="form-icon"></div>
+            </div>
+            <div class="flexible flex-column input-container" >
+                <div class="flexible flex-row space-between">
+                    <div class="input-wrapper flexible flex-column">
+                        <label for="forName" [ngClass]="{'active': nameFocused}">Name</label>
+                        <input type="text"
+                               id="forName"
+                               placeholder="User Name"
+                               class="for-name"
+                               required
+                               [(ngModel)]="form.name"
+                               (focus)= "itWasFocused($event)"
+                               (blur)= "itWasBlured($event)" >
+                    </div>
+
+                    <div class="input-wrapper flexible flex-column">
+                        <label for="forEmail"[ngClass]="{'active': emailFocused}">Email</label>
+                        <input type="email"
+                               id="forEmail"
+                               placeholder="useremail@mail.com"
+                               class="for-email"
+                               required
+                               [(ngModel)]="form.email"
+                               (focus)="itWasFocused($event)"
+                               (blur)= "itWasBlured($event)">
+                    </div>
+
+                </div>
+                <textarea name="textArea" class="textarea" id="" cols="30" rows="10" placeholder="Message text..."></textarea>
+            </div>
+
+            <div class="checked-elements-container">
+
+                <h2 class="title-h2 another">{{array.length}} attached links</h2>
+                <div class="checked-element flexible flex-row space-between" *ngFor = "let element of array; let i = index; let last = last">
+                    <div [ngClass]="chooseClass(element.group)"></div>
+                    <p class="text">{{element.name}} <span class="another">{{element.address}}</span></p>
+                    <div class="trash"></div>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button class="send">Send</button>
+            </div>
+
+
+
+        </form>
+
+    </section>
+
+</div>

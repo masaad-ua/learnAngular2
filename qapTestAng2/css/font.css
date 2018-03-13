@@ -1,0 +1,46 @@
+/*
+          font-weight settings:
+ Ultra Light                        |  100
+ Thin                               |  200
+ Light                              |  300
+ Normal, Roman, Regular             |  400
+ Medium                             |  500
+ Bold                               |  600
+ Heavy                              |  700
+ Black                              |  800
+ Extra Black                        |  900
+
+*/
+
+@font-face {
+    font-family: "MorningStar";
+    src: url("../fonts/MorningStar.eot"); /* Для IE5-9 и других версий IE*/
+    src: url("../fonts/MorningStar.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MorningStar.woff") format("woff"),
+    url("../fonts/MorningStar.ttf") format("truetype");
+url('../fonts/MorningStar.svg#MorningStar') format('svg');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Medium.eot"); /* Для IE5-9 и других версий IE*/
+    src: url("../fonts/Roboto-Medium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto-Medium.woff") format("woff"),
+    url("../fonts/Roboto-Medium.ttf") format("truetype");
+url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Black.eot"); /* Для IE5-9 и других версий IE*/
+    src: url("../fonts/Roboto-Black.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Roboto-Black.woff") format("woff"),
+    url("../fonts/Roboto-Black.ttf") format("truetype");
+url('../fonts/Roboto-Black.svg#Roboto-Black') format('svg');
+    font-style: normal;
+    font-weight: 800;
+}

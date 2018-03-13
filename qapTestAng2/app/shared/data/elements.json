@@ -1,0 +1,23 @@
+[
+  {
+    "group": 1,
+    "id": 1,
+    "name": "Article Name",
+    "address": "Authors, name of edition,publishing year, (more info ?)",
+    "checked": false
+  },
+  {
+    "group": 2,
+    "id": 1,
+    "name": "Article Name",
+    "address": "www address, (more info ?) second line of text",
+    "checked": false
+  },
+  {
+    "group": 3,
+    "id": 1,
+    "name": "Article Name",
+    "address": "www address, (more info ?) second line of text",
+    "checked": false
+  }
+]

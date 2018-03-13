@@ -1,0 +1,20 @@
+.user-wrapper{
+    margin-bottom: 30px;
+}
+/***/
+.image-person{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+/***********form-container**********/
+.ng-valid {
+    border-color: #3c763d;
+}
+.ng-invalid {
+    border-color: #a94442;
+}
+.ng-untouched {
+    border-color: #999999;
+}

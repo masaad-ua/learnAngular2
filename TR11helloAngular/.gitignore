@@ -1,0 +1,8 @@
+node_modules
+typings
+built/*.js
+.idea/
+.irepctl
+*.zip
+*.js
+*.js.map

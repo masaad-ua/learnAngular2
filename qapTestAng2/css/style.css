@@ -1,0 +1,356 @@
+.main-container{
+    font-family: "Roboto";
+    font-size: 11px;
+    color: #656565;
+    width: 1024px;
+    height: 768px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+
+.lists-container{
+    width: 2048px;
+    height: inherit;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -webkit-transition: transform 0.3s linear;
+}
+.lists-container.swipe-right{
+    transform: translateX(-1024px);
+}
+/***************Header-container**************/
+.header-container{
+    height: 105px;
+    overflow: hidden;
+    box-shadow: -1px 4px 7px 0px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.header-container .title-h1{
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 35px;
+        margin-left: 399px;
+ 
+    /* pointer-events: none; */
+}
+
+.header-container .title-h1::selection{
+    background: transparent;
+    text-shadow: none;
+
+}
+
+/*********/
+.header-container .title-h1 .another{
+    font-family: "MorningStar";
+    color: #00b9e6;
+        font-size: 28px;
+    transform: translate(-3px, -4px);
+    display: inline-block;
+
+}
+.header-container .title-h1 .another::selection{
+    background: transparent;
+    text-shadow: none;
+}
+
+/***************Container-list**************/
+.group-lists-container{
+    margin-top: 23px;
+    margin-left: 40px;
+    width: 950px;
+    height: 577px;
+}
+/*****/
+.group-lists-wrapper{
+    height: auto;
+}
+
+/****/
+
+.head-wrapper{
+    background: #db4437;
+    height: 139px;
+    width: 301px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.section:nth-of-type(2) .head-wrapper{
+    background: #00b9e6;
+}
+
+.section:nth-of-type(3) .head-wrapper{
+    background: #0f9d58;
+}
+
+
+.list-wrapper{
+    height:100px;
+    overflow-y: scroll;;
+    overflow-x: hidden;
+
+    height: 380px;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    padding-top: 35px;
+}
+/****/
+
+.head-wrapper .title-h2{
+    color: white;
+    margin-top: 103px;
+    margin-left: 25px;
+}
+.icon  {
+    background:url("../app/assets/images/icon1.png") no-repeat;
+    background-size: contain;
+    height: 33px;
+    width: 70px;
+    position: absolute;
+    top: 43px;
+    left: 116px;
+}
+
+.section:nth-of-type(2) .icon{
+    background:url("../app/assets/images/icon2.png") no-repeat;
+    background-size: contain;
+}
+
+.section:nth-of-type(3) .icon{
+    background:url("../app/assets/images/icon3.png") no-repeat;
+    background-size: contain;
+    left: 103px;
+}
+
+.list{
+    position: relative;
+    padding-left: 53px;
+    margin-bottom:;
+}
+/****/
+.checkbox-list{
+    position: absolute;
+    top: 3px;
+    left: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #8b8b8b;
+    border-radius: 2px;
+    box-sizing: border-box;
+
+}
+
+.checkbox-list.checked{
+    background: url("../app/assets/images/checkbox1.png") no-repeat;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+    border: none;
+}
+
+.section:nth-of-type(2) .checkbox-list.checked{
+    background: url("../app/assets/images/checkbox2.png") no-repeat;
+    background-size: contain;
+
+}
+
+
+.section:nth-of-type(3) .checkbox-list.checked{
+    background: url("../app/assets/images/checkbox3.png") no-repeat;
+    background-size: contain;
+
+}
+.text-list-wrapper{
+    width: 210px;
+    margin-bottom: 10px;
+    color: #b2b2b2;
+}
+
+
+
+
+
+
+/**************Form-container***************/
+.form-container{
+    width: 1024px;
+    height: 768px;
+}
+
+
+/****/
+
+.form-wrapper{
+    margin-top: 23px;
+    margin-left: 145px;   
+}
+
+/****/
+.form{
+   width: 725px;
+   background: white;
+    border-radius: 0px 0px 5px 5px;
+}
+/****/
+.form-header{
+    background: #00b9e6;
+    height: 141px;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+    
+}
+
+.input-container{
+    padding-top: 27px;
+    padding-left: 37px;
+    padding-right: 33px;
+}
+
+[name="textArea"]{
+    margin-top: 31px;
+    height: 24px;
+    resize: none;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #d7d7d7;
+    
+}
+.checked-elements-container{
+    padding-left: 37px;
+    padding-right: 33px;
+    margin-top: 25px;
+    height: 221px;
+    border-bottom: 1px solid #e0dede;
+    overflow: hidden;
+}
+.form-footer{
+    height: 60px;
+    position: relative;
+}
+
+/****/
+.checked-element{
+   margin-bottom: 0px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.checked-element:not(:first-of-type){
+        margin-top: 14px;
+}
+.checked-element::before{
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: #d7d7d7;
+}
+
+.send{
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    color: #00b9e6;
+    position: absolute;
+   bottom: 21px;
+    font-size: 14px;
+    left: 657px;
+}
+/****/
+.form-icon{
+    background: url("../app/assets/images/icon4.png") no-repeat;
+    background-size: contain;
+    height: 35px;
+    width: 87px;
+    position: absolute;
+    top: 48px;
+    left: 320px;
+}
+
+.input-wrapper{
+    
+}
+
+.checked-elements-container .title-h2{
+    color: #00b9e6;
+    margin-bottom: 14px;
+}
+.group{
+    background: url("../app/assets/images/item1.png") no-repeat;
+    background-size: contain;
+    height: 16px;
+    width: 17px;
+    position: absolute;
+    /* padding-left: 10px; */
+}
+.group.second{
+    background: url("../app/assets/images/item2.png") no-repeat;
+    background-size: contain;
+}
+.group.third{
+     background: url("../app/assets/images/item3.png") no-repeat;
+    background-size: contain;
+}
+
+
+
+.checked-element .text{
+       padding-left: 36px;
+    font-size: 14px;
+}
+.trash{
+    background: url("../app/assets/images/trash-icon.png") no-repeat;
+    background-size: contain;
+    height: 17px;
+    width: 14px;
+    
+}
+
+/***/
+.input-wrapper [for="forName"],
+.input-wrapper [for="forEmail"]{
+   font-size: 12px;
+   color: #bdbdbd;
+}
+
+.for-name,
+.for-email{
+    width: 305px;
+    height: 24px;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #d7d7d7;
+    font-size: 15px;
+}
+
+
+.for-name:focus,
+.for-email:focus,
+.textarea:focus{
+    color: #4c4c4c;
+    border-bottom: 2px solid #00b9e6;
+    outline: none;
+}
+
+[for="forName"].active,
+[for="forEmail"].active{
+    color: #00b9e6;
+}
+
+.checked-element .another{
+    text-transform: lowercase;
+}

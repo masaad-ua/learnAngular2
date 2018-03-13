@@ -1,0 +1,10 @@
+h3, p {
+  text-align: center;
+}
+table {
+  margin: auto;
+  max-width: 760px;
+}
+.container{
+  background: green;
+}

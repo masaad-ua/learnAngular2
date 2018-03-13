@@ -1,0 +1,16 @@
+<form  class="form" (ngSubmit)="updateItem(modelForm)">
+    <p>ID of Box {{modelForm.id}}</p>
+    <div class="form-group">
+        <label for="text">Change Text</label>
+        <input type="text"
+               id="text"
+               [(ngModel)]="modelForm.title">
+    </div>
+    <div class="form-group">
+        <label for="color">Change Color</label>
+        <input type="text"
+                id="color"
+               [(ngModel)]="modelForm.color">
+    </div>
+    <button type="submit" >Update Form</button>
+</form>
