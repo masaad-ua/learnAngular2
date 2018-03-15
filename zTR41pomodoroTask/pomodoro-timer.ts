@@ -1,4 +1,4 @@
-import { Component, Input, Output, NgModule, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, Input, Output, NgModule, EventEmitter, ViewEncapsulation} from '@angular/core';
 import { BrowserModule  } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -39,6 +39,11 @@ class PomodoroTimerComponent {
     onCountdownCompleted(): void {
         console.log(`Time up!`);
     }
+    // pomodorosWarningMapping: any = {
+    //     '=0': 'No pomodoros for today',
+    //     '=1': 'One pomodoro pending',
+    //     'other': '# pomodoros pending'
+    // }
 }
 
 // Main module, bootstrapping PomodoroTimerComponent as root component

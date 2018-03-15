@@ -99,7 +99,7 @@ class TaskTooltipDirective {
 @Component({
     selector: 'pomodoro-task-icons',
     template: `<img *ngFor="let icon of icons"
-    src="/assets/img/pomodoro.png" width="{{size}}">`
+                    src="/assets/img/pomodoro.png" width="{{size}}">`
 })
 
 

@@ -17,7 +17,7 @@ var CountdownComponent = (function () {
         var _this = this;
         this.complete = new core_1.EventEmitter();
         this.progress = new core_1.EventEmitter();
-        this.intervalID = setInterval(function () { return _this.tick(); }, 300);
+        this.intervalID = setInterval(function () { return _this.tick(); }, 500);
     }
     CountdownComponent.prototype.tick = function () {
         if (--this.seconds < 1) {
@@ -32,21 +32,22 @@ var CountdownComponent = (function () {
     ], CountdownComponent.prototype, "seconds", void 0);
     __decorate([
         core_1.Output(),
-        __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+        __metadata("design:type", core_1.EventEmitter)
     ], CountdownComponent.prototype, "complete", void 0);
     __decorate([
         core_1.Output(),
-        __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
+        __metadata("design:type", core_1.EventEmitter)
     ], CountdownComponent.prototype, "progress", void 0);
     CountdownComponent = __decorate([
         core_1.Component({
             selector: 'countdown',
             template: "<h1> Time: left: {{seconds}}</h1>",
+            styles: ['h1 { color: #900}'],
+            encapsulation: core_1.ViewEncapsulation.Emulated
         }),
         __metadata("design:paramtypes", [])
     ], CountdownComponent);
     return CountdownComponent;
-    var _a, _b;
 }());
 var PomodoroTimerComponent = (function () {
     function PomodoroTimerComponent() {
@@ -58,7 +59,8 @@ var PomodoroTimerComponent = (function () {
         core_1.Component({
             selector: 'pomodoro-timer',
             directives: [CountdownComponent],
-            template: "<div class=\"container text-center\">\n                    <img src=\"assets/img/pomodoro.png\" />\n                    <countdown  [seconds] =\"25\"\n                                (complete)=\"onCountdownCompleted()\"\n                                (progress)=\"timeout = $event\">\n                    </countdown>\n                    <p *ngIf=\"timeout < 10\">\n                        Beware! Only\n                        <strong>{{timeout}} seconds</strong>\n                        left.\n                    </p>\n                </div>"
+            templateUrl: './pomodoro-timer.html',
+            styleUrls: ['pomodoro-timer.css']
         })
     ], PomodoroTimerComponent);
     return PomodoroTimerComponent;
