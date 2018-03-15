@@ -4,3 +4,4 @@ build
 .idea/
 .irepctl
 *.zip
+package-lock.json
