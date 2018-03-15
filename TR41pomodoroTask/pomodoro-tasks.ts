@@ -119,8 +119,8 @@ class TaskIconsComponent implements OnInit {
     selector: 'pomodoro-tasks',
     directives: [TaskIconsComponent],
     pipes: [FormattedTimePipe, QueuedOnlyPipe],
-    styleUrls: ['/app/pomodoro-tasks.css'],
-    templateUrl: '/app/pomodoro-tasks.html'
+    styleUrls: ['/built/pomodoro-tasks.css'],
+    templateUrl: '/built/pomodoro-tasks.html'
 })
 
 class TasksComponent {
