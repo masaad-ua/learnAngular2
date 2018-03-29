@@ -5,12 +5,12 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 // Our first "Hello world" component
 @Component({
   selector: 'hello-angular',
-  template: '<h1 class="text-center"> {{greeting}} </h1>'
+  templateUrl: 'built/hello-angular.template.html'
 })
 export class HelloAngularComponent {
   greeting: string;
   constructor() {
-    this.greeting = 'Hello Angular 2!';
+    this.greeting = "Hello Angular 22!";
   }
 }
 
@@ -18,7 +18,6 @@ export class HelloAngularComponent {
   selector: 'my-component',
   template: `<h2>{{element}}</h2>`
 })
-
 export class MyComponent {
   element: string;
   constructor() {
@@ -28,14 +27,14 @@ export class MyComponent {
 
 
 
-// Main module, bootstrapping HelloAngularComponent as root component
-@NgModule({
-  imports: [BrowserModule],
-  declarations: [MyComponent, HelloAngularComponent],
-  bootstrap: [ MyComponent, HelloAngularComponent],
-})
-export class AppModule { }
+ //Main module, bootstrapping HelloAngularComponent as root component
+//@NgModule({
+//  imports: [BrowserModule],
+//  declarations: [MyComponent, HelloAngularComponent],
+//  bootstrap: [ MyComponent, HelloAngularComponent],
+//})
+//export class AppModule { }
 
 // Application bootstrap (specific for browser environments)
-const platform = platformBrowserDynamic();
-platform.bootstrapModule(AppModule);
+//const platform = platformBrowserDynamic();
+//platform.bootstrapModule(AppModule);

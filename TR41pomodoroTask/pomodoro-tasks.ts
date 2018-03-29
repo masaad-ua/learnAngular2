@@ -71,8 +71,6 @@ class QueuedOnlyPipe implements PipeTransform {
 @Directive({
     selector: '[task]'
 })
-
-
 class TaskTooltipDirective {
     private defaultTooltipText: string;
     @Input() task: Task;
@@ -119,8 +117,8 @@ class TaskIconsComponent implements OnInit {
     selector: 'pomodoro-tasks',
     directives: [TaskIconsComponent],
     pipes: [FormattedTimePipe, QueuedOnlyPipe],
-    styleUrls: ['/built/pomodoro-tasks.css'],
-    templateUrl: '/built/pomodoro-tasks.html'
+    styleUrls: ['pomodoro-tasks.css'],
+    templateUrl: 'pomodoro-tasks.html'
 })
 
 class TasksComponent {

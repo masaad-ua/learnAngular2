@@ -173,8 +173,8 @@ var TasksComponent = (function () {
             selector: 'pomodoro-tasks',
             directives: [TaskIconsComponent],
             pipes: [FormattedTimePipe, QueuedOnlyPipe],
-            styleUrls: ['/built/pomodoro-tasks.css'],
-            templateUrl: '/built/pomodoro-tasks.html'
+            styleUrls: ['pomodoro-tasks.css'],
+            templateUrl: 'pomodoro-tasks.html'
         }),
         __metadata("design:paramtypes", [])
     ], TasksComponent);

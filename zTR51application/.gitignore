@@ -1,0 +1,7 @@
+node_modules
+typings
+built/*.js
+.idea/
+.irepctl
+*.zip
+package-lock.json
