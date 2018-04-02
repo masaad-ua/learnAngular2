@@ -1,4 +1,4 @@
-System.register(["@angular/core", "./timer/timer", "./tasks/tasks", "./shared/shared"], function (exports_1, context_1) {
+System.register(["@angular/core", "./timer/timer", "./tasks/tasks", "./shared/shared", "@angular/http"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7,7 +7,7 @@ System.register(["@angular/core", "./timer/timer", "./tasks/tasks", "./shared/sh
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, timer_1, tasks_1, shared_1, AppComponent;
+    var core_1, timer_1, tasks_1, shared_1, http_1, AppComponent;
     return {
         setters: [
             function (core_1_1) {
@@ -21,6 +21,9 @@ System.register(["@angular/core", "./timer/timer", "./tasks/tasks", "./shared/sh
             },
             function (shared_1_1) {
                 shared_1 = shared_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
             }
         ],
         execute: function () {
@@ -31,8 +34,8 @@ System.register(["@angular/core", "./timer/timer", "./tasks/tasks", "./shared/sh
                     core_1.Component({
                         selector: 'pomodoro-app',
                         directives: [timer_1.TIMER_DIRECTIVES, tasks_1.TASKS_DIRECTIVES],
-                        providers: [shared_1.SHARED_PROVIDERS],
-                        template: "\n    <nav class=\"navbar navbar-default navbar-static-top\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <strong class=\"navbar-brand\">My Pomodoro App</strong>\n        </div>\n      </div>\n    </nav>\n\n    <pomodoro-timer-widget>  </pomodoro-timer-widget>\n    <pomodoro-tasks></pomodoro-tasks>\n    "
+                        providers: [shared_1.SHARED_PROVIDERS, http_1.HTTP_PROVIDERS],
+                        template: "\n    <nav class=\"navbar navbar-default navbar-static-top\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <strong class=\"navbar-brand\">My Pomodoro App</strong>\n        </div>\n      </div>\n    </nav>\n\n    <pomodoro-timer-widget></pomodoro-timer-widget>\n    <pomodoro-tasks></pomodoro-tasks>\n    "
                     })
                 ], AppComponent);
                 return AppComponent;

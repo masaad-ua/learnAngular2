@@ -18,18 +18,19 @@ System.register(["@angular/core"], function (exports_1, context_1) {
             QueuedOnlyPipe = /** @class */ (function () {
                 function QueuedOnlyPipe() {
                 }
-                QueuedOnlyPipe.prototype.transform = function (queueableltems) {
+                QueuedOnlyPipe.prototype.transform = function (queueableItems) {
                     var args = [];
                     for (var _i = 1; _i < arguments.length; _i++) {
                         args[_i - 1] = arguments[_i];
                     }
-                    return queueableltems.filter(function (queueableltem) {
-                        return queueableltem.queued === args[0];
+                    return queueableItems.filter(function (queueableItem) {
+                        return queueableItem.queued === args[0];
                     });
                 };
                 QueuedOnlyPipe = __decorate([
                     core_1.Pipe({
-                        name: 'pomodoroQueuedOnly', pure: false
+                        name: 'pomodoroQueuedOnly',
+                        pure: false
                     })
                 ], QueuedOnlyPipe);
                 return QueuedOnlyPipe;

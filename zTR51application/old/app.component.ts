@@ -20,4 +20,4 @@
 //    <pomodoro-tasks></pomodoro-tasks>
 //    `
 //})
-//export class AppComponent {}
+//export default class AppComponent {}

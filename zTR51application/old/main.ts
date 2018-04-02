@@ -1,6 +1,5 @@
-//import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-//import {AppModule} from './app.module';
+//import 'rxjs/add/operator/map';
+//import { bootstrap } from '@angular/platform-browser-dynamic';
+//import AppComponent from './app.component';
 //
-//const platform = platformBrowserDynamic();
-//platform.bootstrapModule( AppModule );
-//
+//bootstrap(AppComponent, []);

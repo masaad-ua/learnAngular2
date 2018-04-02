@@ -38,6 +38,11 @@ System.register(["@angular/core", "./task-icons.component", "./task-tooltip.dire
                     this.timerMinutes = settingsService.timerMinutes;
                 }
                 TasksComponent.prototype.ngOnInit = function () {
+                    var _this = this;
+                    this.taskService.taskFeed.subscribe(function (newTask) {
+                        _this.tasks.push(newTask);
+                        _this.updateQueuedPomodoros();
+                    });
                     this.updateQueuedPomodoros();
                 };
                 TasksComponent.prototype.toggleTask = function (task) {
