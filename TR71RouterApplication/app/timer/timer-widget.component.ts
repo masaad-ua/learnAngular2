@@ -39,7 +39,6 @@ export default class TimerWidgetComponent implements OnInit, CanReuse, OnReuse {
     if (!isNaN(taskIndex)) {
       this.taskName = this.taskService.taskStore[taskIndex].name;
     }
-
   }
 
   resetPomodoro(): void {
@@ -77,5 +76,6 @@ export default class TimerWidgetComponent implements OnInit, CanReuse, OnReuse {
     this.taskName = null;
     this.isPaused = false;
     this.resetPomodoro();
+    console.log("routerOnReuse is activated");
   }
 }

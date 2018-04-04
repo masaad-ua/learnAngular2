@@ -13,14 +13,12 @@ import { Title } from '@angular/platform-browser';
     providers: [Title],
     templateUrl: 'app/tasks/task-editor.component.html'
 })
-
 @CanActivate((
     next: ComponentInstruction,
     prev: ComponentInstruction):boolean => {
     let passPhrase = prompt('Say the magic words');
-    console.log(next);
+        console.log(next);
     return (passPhrase === 'open sesame');
-
 })
 export default class TaskEditorComponent implements OnActivate, CanDeactivate, OnDeactivate {
 

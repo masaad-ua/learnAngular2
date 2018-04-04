@@ -53,6 +53,8 @@ export default class TasksComponent implements OnInit {
                 return pomodoros + queuedTask.pomodorosRequired;
             }, 0);
     }
+    //метод,программно перенаправляющий пользователя по маршруту для
+    //выполнения задания:
 
     workOn(index: number): void {
         this.router.navigate(['TimerComponent', 'TaskTimer', { id: index }]);

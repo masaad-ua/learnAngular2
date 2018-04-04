@@ -1,6 +1,5 @@
-System.register(['@angular/core', '@angular/router-deprecated', '@angular/platform-browser'], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/router-deprecated", "@angular/platform-browser"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(['@angular/core', '@angular/router-deprecated', '@angular/platfo
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_deprecated_1, platform_browser_1;
-    var TaskEditorComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, router_deprecated_1, platform_browser_1, TaskEditorComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -22,9 +21,10 @@ System.register(['@angular/core', '@angular/router-deprecated', '@angular/platfo
             },
             function (platform_browser_1_1) {
                 platform_browser_1 = platform_browser_1_1;
-            }],
-        execute: function() {
-            TaskEditorComponent = (function () {
+            }
+        ],
+        execute: function () {
+            TaskEditorComponent = /** @class */ (function () {
                 function TaskEditorComponent(title) {
                     this.title = title;
                 }
@@ -48,12 +48,12 @@ System.register(['@angular/core', '@angular/router-deprecated', '@angular/platfo
                         var passPhrase = prompt('Say the magic words');
                         console.log(next);
                         return (passPhrase === 'open sesame');
-                    }), 
-                    __metadata('design:paramtypes', [platform_browser_1.Title])
+                    }),
+                    __metadata("design:paramtypes", [platform_browser_1.Title])
                 ], TaskEditorComponent);
                 return TaskEditorComponent;
             }());
             exports_1("default", TaskEditorComponent);
         }
-    }
+    };
 });

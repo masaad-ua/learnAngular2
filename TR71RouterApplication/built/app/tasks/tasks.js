@@ -1,10 +1,9 @@
-System.register(['./tasks.component', './task-editor.component', './task-tooltip.directive'], function(exports_1, context_1) {
+System.register(["./tasks.component", "./task-editor.component", "./task-tooltip.directive"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var tasks_component_1, task_editor_component_1, task_tooltip_directive_1;
-    var TASKS_DIRECTIVES;
+    var tasks_component_1, task_editor_component_1, task_tooltip_directive_1, TASKS_DIRECTIVES;
     return {
-        setters:[
+        setters: [
             function (tasks_component_1_1) {
                 tasks_component_1 = tasks_component_1_1;
             },
@@ -13,17 +12,18 @@ System.register(['./tasks.component', './task-editor.component', './task-tooltip
             },
             function (task_tooltip_directive_1_1) {
                 task_tooltip_directive_1 = task_tooltip_directive_1_1;
-            }],
-        execute: function() {
+            }
+        ],
+        execute: function () {
+            exports_1("TasksComponent", tasks_component_1.default);
+            exports_1("TaskEditorComponent", task_editor_component_1.default);
+            exports_1("TaskTooltipDirective", task_tooltip_directive_1.default);
             TASKS_DIRECTIVES = [
                 tasks_component_1.default,
                 task_editor_component_1.default,
                 task_tooltip_directive_1.default
             ];
             exports_1("TASKS_DIRECTIVES", TASKS_DIRECTIVES);
-            exports_1("TasksComponent", tasks_component_1.default);
-            exports_1("TaskEditorComponent", task_editor_component_1.default);
-            exports_1("TaskTooltipDirective", task_tooltip_directive_1.default);
         }
-    }
+    };
 });

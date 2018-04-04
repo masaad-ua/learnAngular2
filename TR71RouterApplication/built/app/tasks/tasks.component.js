@@ -1,6 +1,5 @@
-System.register(['@angular/core', './task-icons.component', './task-tooltip.directive', '../shared/shared', '@angular/router-deprecated'], function(exports_1, context_1) {
+System.register(["@angular/core", "./task-icons.component", "./task-tooltip.directive", "../shared/shared", "@angular/router-deprecated"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(['@angular/core', './task-icons.component', './task-tooltip.dire
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, task_icons_component_1, task_tooltip_directive_1, shared_1, router_deprecated_1;
-    var TasksComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, task_icons_component_1, task_tooltip_directive_1, shared_1, router_deprecated_1, TasksComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -28,9 +27,10 @@ System.register(['@angular/core', './task-icons.component', './task-tooltip.dire
             },
             function (router_deprecated_1_1) {
                 router_deprecated_1 = router_deprecated_1_1;
-            }],
-        execute: function() {
-            TasksComponent = (function () {
+            }
+        ],
+        execute: function () {
+            TasksComponent = /** @class */ (function () {
                 function TasksComponent(taskService, settingsService, router) {
                     this.taskService = taskService;
                     this.settingsService = settingsService;
@@ -60,6 +60,8 @@ System.register(['@angular/core', './task-icons.component', './task-tooltip.dire
                         return pomodoros + queuedTask.pomodorosRequired;
                     }, 0);
                 };
+                //метод,программно перенаправляющий пользователя по маршруту для
+                //выполнения задания:
                 TasksComponent.prototype.workOn = function (index) {
                     this.router.navigate(['TimerComponent', 'TaskTimer', { id: index }]);
                 };
@@ -70,13 +72,15 @@ System.register(['@angular/core', './task-icons.component', './task-tooltip.dire
                         pipes: [shared_1.SHARED_PIPES],
                         styleUrls: ['app/tasks/tasks.component.css'],
                         templateUrl: 'app/tasks/tasks.component.html'
-                    }), 
-                    __metadata('design:paramtypes', [shared_1.TaskService, shared_1.SettingsService, router_deprecated_1.Router])
+                    }),
+                    __metadata("design:paramtypes", [shared_1.TaskService,
+                        shared_1.SettingsService,
+                        router_deprecated_1.Router])
                 ], TasksComponent);
                 return TasksComponent;
             }());
             exports_1("default", TasksComponent);
             ;
         }
-    }
+    };
 });

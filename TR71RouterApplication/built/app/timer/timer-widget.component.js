@@ -1,6 +1,5 @@
-System.register(['@angular/core', '../shared/shared', '@angular/router-deprecated'], function(exports_1, context_1) {
+System.register(["@angular/core", "../shared/shared", "@angular/router-deprecated"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(['@angular/core', '../shared/shared', '@angular/router-deprecate
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, shared_1, router_deprecated_1;
-    var TimerWidgetComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, shared_1, router_deprecated_1, TimerWidgetComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -22,9 +21,10 @@ System.register(['@angular/core', '../shared/shared', '@angular/router-deprecate
             },
             function (router_deprecated_1_1) {
                 router_deprecated_1 = router_deprecated_1_1;
-            }],
-        execute: function() {
-            TimerWidgetComponent = (function () {
+            }
+        ],
+        execute: function () {
+            TimerWidgetComponent = /** @class */ (function () {
                 function TimerWidgetComponent(settingsService, routeParams, taskService) {
                     this.settingsService = settingsService;
                     this.routeParams = routeParams;
@@ -70,17 +70,20 @@ System.register(['@angular/core', '../shared/shared', '@angular/router-deprecate
                     this.taskName = null;
                     this.isPaused = false;
                     this.resetPomodoro();
+                    console.log("routerOnReuse is activated");
                 };
                 TimerWidgetComponent = __decorate([
                     core_1.Component({
                         selector: 'pomodoro-timer-widget',
                         template: "\n    <div class=\"text-center\">\n      <img src=\"/app/shared/assets/img/pomodoro.png\" alt=\"Pomodoro\">\n      <h3><small>{{ taskName }}</small></h3>\n      <h1> {{ minutes }}:{{ seconds  | number: '2.0' }} </h1>\n      <p>\n        <button (click)=\"togglePause()\" class=\"btn btn-danger\">\n        {{ buttonLabelKey | i18nSelect: buttonLabelsMap }}\n        </button>\n      </p>\n    </div>"
-                    }), 
-                    __metadata('design:paramtypes', [shared_1.SettingsService, router_deprecated_1.RouteParams, shared_1.TaskService])
+                    }),
+                    __metadata("design:paramtypes", [shared_1.SettingsService,
+                        router_deprecated_1.RouteParams,
+                        shared_1.TaskService])
                 ], TimerWidgetComponent);
                 return TimerWidgetComponent;
             }());
             exports_1("default", TimerWidgetComponent);
         }
-    }
+    };
 });
